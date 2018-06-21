@@ -1,6 +1,6 @@
 ## location 打开行为与浏览器机制的关系
 
-
+[chrome code](https://cs.chromium.org/search/?q=Unload&p=2&sq=package:chromium&type=cs)
 - 多次执行location.href 代码保证执行，浏览器是否发送请求，建立连接
 ```
 var dom = document.getElementById('btn');
