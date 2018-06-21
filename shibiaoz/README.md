@@ -12,7 +12,8 @@ var dom = document.getElementById('btn');
         }
 ```
 结果是打开`借贷宝`,window.location.href = url1; 这行代码是被执行了的，但是没有并没有建立连接
-通过chrome://net-internals/#events 来分析，
+通过chrome://net-internals/#events 来分析，这相当于对location.href进行了多次赋值，然后浏览器取最后一个值，所以不会对
+第一个location 创建socket 连接，似乎这样比较合理。
 ![同步多次执行](./1.jpeg)
 
 
@@ -33,7 +34,8 @@ dom.onclick = function () {
 ![同步多次执行](./2.jpeg)
 
 
-- 那么接下来需要确定的是，浏览器什么时候会出发对location的站点进行连接，什么时候进行跳转?
+- 那么接下来需要确定的是，浏览器什么时候会触发对location的站点进行连接，什么时候进行跳转?
+在此之前，偶然发现一个偶然的时间差会带来偶然性的结果？看下面的代码
 ```
 var dom = document.getElementById('btn');
         var url1 = 'http://www.baidu.com/';
