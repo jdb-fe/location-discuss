@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <a id="link1" href="javascript:alert('1');">link1</a>
+    <button id="btn">btn click</button>
+    <script>
+      var dom = document.getElementById('btn');
+      var url1 = 'http://localhost:3000/second.html';
+      var url2 = 'http://www.baidu.com/';
+      dom.onclick = function () {
+        log('location跳转到本地模拟服务器');
+        window.location.href = url1;
+        setTimeout(() => {
+          log('location跳转到百度')
+          window.location.href = url2;
+        }, 200);
+      }
+      window.onunload = function () {
+        log('-------unload--------')
+      }
+      window.onbeforeunload = function () {
+        log('-------beforeunload--------')
+      }
+
+      function log(info){
+        console.debug(info);
+      }
+
+    </script>
+  </body>
+
+</html>

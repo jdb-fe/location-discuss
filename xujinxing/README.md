@@ -49,14 +49,14 @@
       4、增加300ms延迟,内部修改location延迟200ms，结果跳转到百度
   ```
   * 以下分别是上述四中情况的日志和网络截图
-  ![1123](./no-delay.png)
-  ![1123](./no-delay-log.png)
-  ![1123](./100ms.png)
-  ![1123](./100ms-log.png)
-  ![1123](./200ms.png)
-  ![1123](./200ms-log.png)
-  ![1123](./300ms.png)
-  ![1123](./300ms-log.png)
+  ![1123](./images/no-delay.png)
+  ![1123](./images/no-delay-log.png)
+  ![1123](./images/100ms.png)
+  ![1123](./images/100ms-log.png)
+  ![1123](./images/200ms.png)
+  ![1123](./images/200ms-log.png)
+  ![1123](./images/300ms.png)
+  ![1123](./images/300ms-log.png)
   
 - 推论
     
